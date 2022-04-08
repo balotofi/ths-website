@@ -1,15 +1,67 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %}
 
 {% block content%}
-<div></div>
- <h1 align="center">Welcome to Towering Heights</h1>
- <div class="container-fluid">
-     <p>
-        This is the official website for the Towering Heights Schools in Akure, Ondo State. 
-        We have a warm, safe, secure environment where children have the opportunity 
-        to develop a love of learning and independence.
-     </p>
- </div>
-    
 
-{% endblock %}  
+
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron"
+  class="bg-image p-5 text-center shadow-1-strong rounded mb-2 text-white"
+  style="background-image: url('https://www.drive.google.com/uc?id=1r-pe153xqSnx08uRzVByAIgXuDmYcLHV');
+        background-size: cover;"
+  >
+    <div class="container">
+      <div
+  class="bg-image p-5 text-center shadow-1-strong rounded mb-2 text-white"
+  style="background: none;"
+>
+        <h1 class="display-3">Welcome, to Towering Heights!</h1>
+        <p>This is the official website for the Towering Heights Schools in Akure, Ondo State.<br> 
+          We have a warm, safe, secure environment where children have the opportunity 
+          to develop a love of learning and independence.</p>
+        <p><a class="btn btn-primary btn-lg" href="/about" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Background image -->
+<div
+class="bg-image d-flex justify-content-center align-items-center"
+style="
+  background-image: url('https://www.drive.google.com/uc?id=1oEAJBJ580SpSG-DPgjS8HxfBlWWuTsMn');
+  height: 100vh;
+  background-size: cover;"
+>
+<h1 class="text-white">Another home for your kids.</h1>
+</div>
+<!-- Background image -->
+
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Admissions</h2>
+      <p>Choosing the right school marks a new beginning in the life of your child.<br>
+        Contact us as early as possible to have your child assessed and ready for school. </p>
+      <p><a class="btn btn-secondary" href="/contact" role="button">View details &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2>Calendar</h2>
+      <p>Terms, exams, holidays, keep up to date on what's hapenning when so you don't fall behind. </p>
+      <p><a class="btn btn-secondary" href="/calendar" role="button">View details &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2>Latest News</h2>
+      <p>Check out what's been happening at THS</p>
+      <p><a class="btn btn-secondary" href="/news" role="button">View details &raquo;</a></p>
+    </div>
+  </div>
+
+  <hr>
+
+</div> <!-- /container -->
+
+{% endblock %}
+      
