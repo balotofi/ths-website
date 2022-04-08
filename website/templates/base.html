@@ -19,23 +19,25 @@
     <title>{% block title %}Home{% endblock %}</title>
    </head>
    <body>
-      <nav class="navbar navbar-expand-md navbar-blue fixed-top bg-light">
-          <a class="navbar-brand" href="/">THS</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
-          >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar">
-            <div class="navbar-nav">
-              <a class="nav-item nav-link" id="home" href="/">Home</a>
-              <a class="nav-item nav-link" id="about" href="/about">About Us</a>
-              <a class="nav-item nav-link" id="parents" href="/parents">Parents</a>
-              <a class="nav-item nav-link" id="news" href="/news">News & Events</a>
-              <a class="nav-item nav-link" id="vacancies" href="/vacancies">We're Hiring</a>
-              <a class="nav-item nav-link" id="contact" href="/contact">Contact Us</a>
-            </div>
-          </div>>  
-      </nav>
+     <header>
+        <nav class="navbar navbar-expand-md navbar-blue fixed-top bg-light">
+            <a class="navbar-brand" href="/">THS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+            >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbar">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link" id="home" href="/">Home</a>
+                <a class="nav-item nav-link" id="about" href="/about">About Us</a>
+                <a class="nav-item nav-link" id="parents" href="/parents">Parents</a>
+                <a class="nav-item nav-link" id="news" href="/news">News & Events</a>
+                <a class="nav-item nav-link" id="vacancies" href="/vacancies">We're Hiring</a>
+                <a class="nav-item nav-link" id="contact" href="/contact">Contact Us</a>
+              </div>
+            </div>>  
+        </nav>
+     </header>
 
     <div class="container">{% block content %} Home {% endblock %}</div>
     <script
@@ -54,10 +56,10 @@
       crossorigin="anonymous"
     ></script>
 
-    <script
+    <!-- <script
       type="text/javascript"
-      src="{{ url_for('static', filename='index.js') }}"
-    ></script>
+      src="{{ url_for('static', filename='#') }}"
+    ></script> -->
   </body>
 
 
@@ -121,7 +123,5 @@
     </div>
   </footer>
 </div>
-
-
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
 </html>
