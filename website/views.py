@@ -26,12 +26,12 @@ def vacancies():
 def news():
     return render_template("news.html")
 
-@views.route('/results') #(,methods=['GET', 'POST'])
+@views.route('/results', methods=['GET', 'POST'])
 # @login_required
 def results():
 #     if request.method == 'POST':
 #         note = request.form.get('note')
-    return render_template("results.html") #(,user=current_user)
+    return render_template("results.html") #(user=current_user)
 
 @views.route('/contact')
 def contact():
