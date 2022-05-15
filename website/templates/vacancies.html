@@ -3,10 +3,8 @@
 {% block content%}
 
 
- <div class="container-fluid">
-
- <main role="main" class="container">
-
+<div class="container-fluid">
+  <main role="main" class="container">
     <div class="starter-template">
       <h1 align="center">We're Hiring!</h1>
       <p class="lead" style="text-align: center;">Vacancy! Vacancy!! Vacancy!!! Towering Heights School is looking for experienced 
@@ -15,44 +13,33 @@
         Contact 08105313377 for further enquiry. 
       SKILLS REQUIRED  -patience    -focus</p>
     </div>
-
   </main><!-- /.container -->
 </div> 
 
-<div class="container">
-        <img align="center" src="../images/staff2.jpg" alt="Current staff of THS in blue staff ensemble.">
-        <!-- <img align="center" src="https://www.drive.google.com/uc?id=1TdFJhWOeu5dp-DOWgRmPtC5QuD9oTI0u" alt="Current staff of THS in blue staff ensemble."> -->
+<div class="container" >
+        <img src="{{ url_for('static', filename='images/staff2.jpg') }}" align="center" alt="Current staff of THS in blue staff ensemble.">
 </div>
   
   <!---<div class="row">--->
- <div class="contact-content"> 
+<div class="contact-content"> 
   <form action="employmentacademy.php" method="post" enctype="multipart/form-data">
   <div align="center">
     <table width="75%" align="center">
-  
-    
-     
       <tr >
-     <div class="elements-title mb-50">
+    <div class="elements-title mb-50">
       <h1>COMPLETE DETAILS TO UPLOAD CV:</h1>
-                         
-                         <span>Note: Fields marked with an asterisk <font color=red>*</font> are required</span>
-                      </div>
-            
+      <span>Note: Fields marked with an asterisk <font color=red>*</font> are required</span>
+    </div>   
         <td colspan="2"></td>
       </tr>
       <tr>
-                    <td colspan="2" ><div align="center"><font color=red></font></div></td>
-                  </tr>
-          
-          
-           <tr>
-          <td colspan="2">
-        <hr color=Navy >
-        
+        <td colspan="2" ><div align="center"><font color=red></font></div></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+      <hr color=Navy > 
         </td>
-        </tr>
-          
+      </tr>   
       <tr>
         <td width="42%" class="style47"><div align="left"><span class="style49">*</span>Surname</div></td>
         <td width="58%"><input name="sname" type="text" class="form-control" style="background-color:#FFFFCC"  value="" size="35" maxlength="50"/></td>
@@ -145,7 +132,26 @@
   <option value='2001'>2001
   <option value='2002'>2002
   <option value='2003'>2003
-  <option value='2004'selected>2004
+  <option value='2004'>2004
+  <option value='2005'>2005
+  <option value='2006'>2006
+  <option value='2007'>2007
+  <option value='2008'>2008
+  <option value='2009'>2009
+  <option value='2010'>2010
+  <option value='2011'>2011
+  <option value='2012'>2012
+  <option value='2013'>2013
+  <option value='2014'>2014
+  <option value='2015'>2015
+  <option value='2015'>2015
+  <option value='2016'>2016
+  <option value='2017'>2017
+  <option value='2018'>2018
+  <option value='2019'>2019
+  <option value='2020'>2020
+  <option value='2021'>2021
+  <option value='2022'selected>20022
         </select></td>
       </tr>
       <tr>
