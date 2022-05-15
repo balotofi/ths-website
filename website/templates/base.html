@@ -25,12 +25,9 @@
     <header class="py-3 mb-4">
       <div class="container d-flex flex-wrap justify-content-left">
         <a class="navbar-brand" href="/">
-          <!-- <img src= "../images/logo_ths.jpg"> -->
-          <!-- <img src="https://www.drive.google.com/uc?id=1I66yg9aIzu31ZwdGyB7OJv00gVOKp4uY" alt="Towering Heights official logo "width="200" height="170" class="d-inline-block"> -->
-          <!-- width="150" height="110" -->
+          <img src="{{ url_for('static', filename='images/logo_ths.jpg') }}" alt="Towering Heights official logo "width="200" height="170" class="d-inline-block">
           <span style="font-size: 50px">Towering Heights Schools</span>
         </a>
-        <!-- <h1>Towering Heights Schools</h1> -->
       </div>
     </header>
     <nav class="navbar navbar-expand-md navbar-dark bg-primary py-3 sticky-top">
@@ -146,5 +143,5 @@
     </div>
   </footer>
 </div>
-    <!-- <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
 </html>
