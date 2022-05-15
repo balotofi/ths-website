@@ -4,20 +4,17 @@
 
 <main role="main">
 
-
   <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top:25px;">
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="svg-wrapper background-image" style="background-image: url('../images/smiling_five_blue_uniform.jpg'); -webkit-background-composite: border; background-size: cover;">
-        <!-- <img src="../images/smiling_five_blue_uniform.jpg" class="d-block w-100" alt="KG2 children smiling in school uniform outside TH."> -->
-        <!-- <img src="https://www.drive.google.com/uc?id=1r-pe153xqSnx08uRzVByAIgXuDmYcLHV" class="d-block w-100" alt="KG2 children smiling in school uniform outside TH."> -->
-        <svg class="bd-placeholder-img" style="background-image: url('../images/smiling_five_blue_uniform.jpg')" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/>
-        </svg>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{{ url_for('static', filename='images/smiling_five_blue_uniform.jpg') }}" class="d-block w-100" alt="KG2 children smiling in school uniform outside TH.">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/>
+          </svg>
         </div>
         <div class="container">
           <div class="carousel-caption text-left">
@@ -27,22 +24,20 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item">
-        <img src="../images/green_dress_girl.JPG" class="d-block w-100" alt="Children engageing with each other in non-uniform."/>
-        <!-- <img src="https://www.drive.google.com/uc?id=1tUXIMfDEUmmo5O4yX2ITmJ0-h87XKzW6" class="d-block w-100" alt="Children engageing with each other in non-uniform."> -->
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Another home for your kids</h1>
-            <p>We have a warm, safe, secure environment where children have the opportunity 
+        <div class="carousel-item">
+          <img src="{{ url_for('static', filename='images/green_dress_girl.jpg') }}" class="d-block w-100" alt="Little girl in green dress"/>
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Another home for your kids</h1>
+              <p>We have a warm, safe, secure environment where children have the opportunity 
               to develop a love of learning and independence.</p>
-            <p><a class="btn btn-lg btn-primary" href="/contact" role="button">Get in touch today!</a></p>
+              <p><a class="btn btn-lg btn-primary" href="/contact" role="button">Get in touch today!</a></p>
+            </div>
           </div>
         </div>
-      </div>
       <div class="carousel-item">
-        <img src="../images/kids_roundtable.jpg" class="d-block w-100" alt="Children playing at a classroom table inside TH."/>
-        <!-- <img src="https://www.drive.google.com/uc?id=1NRC2t0FnsJo2gTz_PSmZkA92l-szX2cL" class="d-block w-100" alt="Children playing at a classroom table inside TH."> -->
+        <img src="{{ url_for('static', filename='images/kids_roundtable.jpg') }}" class="d-block w-100" alt="Children playing at a classroom table inside TH."/>
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
         <div class="container">
           <div class="carousel-caption text-right">

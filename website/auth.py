@@ -1,14 +1,14 @@
-# from flask import Blueprint, render_template, request, flash, redirect, url_for 
+from flask import Blueprint, render_template #request, flash, redirect, url_for 
 # from .models import User
 # from werkzeug.security import generate_password_hash, check_password_hash
 # from . import db
 # from flask_login import login_user, login_required, logout_user, current_user
 
 
-# auth = Blueprint('auth', __name__)
+auth = Blueprint('auth', __name__)
 
-# @auth.route('/results', methods=['GET', 'POST'])
-# def results_login():
+@auth.route('/results') # methods=['GET', 'POST'])
+def login():
 #     if request.method == 'POST':
 #         email = request.form.get('email')
 #         password = request.form.get('password')
@@ -24,16 +24,18 @@
 #         else:
 #             flash('Email does not exist.', category='error')
 
-#     return render_template("results.html", user=current_user)
+    return render_template("results.html") #user=current_user)
 
-# @auth.route('/logout')
+@auth.route('/logout')
 # # @login_required
-# def logout():
+def logout():
+    return "<p>Logout<p>"
 #     logout_user()
 #     return redirect(url_for('auth.results_login'))
 
-# @auth.route('/sign-up', methods=['GET', 'POST'])
-# def sign_up():
+@auth.route('/sign-up') #, methods=['GET', 'POST'])
+def sign_up():
+    return "<p>Sign Up<p>"
 #     if request.method == 'POST':
 #         email = request.form.get('email')
 #         first_name = request.form.get('firstName')
@@ -61,27 +63,3 @@
 #             return redirect(url_for('views.home'))
 
 #     return render_template("sign_up.html", user=current_user)
-
-# # @auth.route(/about)
-# # def about():
-# #     return render_template(about.html)
-
-# # @auth.route(/parents)
-# # def parents():
-# #     return render_template(parents.html)
-
-# # @auth.route(/classes)
-# # def classes():
-# #     return render_template(classes.html)
-
-# # @auth.route(/news)
-# # def news():
-# #     return render_template(news.html)
-
-# # @auth.route(/calendar)
-# # def calendar():
-# #     return render_template(calendar.html)
-
-# # @auth.route(/contact)
-# # def contact():
-# #     return render_template(contact.html)

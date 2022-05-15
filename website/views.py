@@ -1,7 +1,8 @@
 #PUTTY: c:users/myname/.ssh/known hosts - 192.168.181.192 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKp3IEyYqW9zzqpsXPzVt/OZZQk8FD0PXxB9E5ealC2fONqT2Vj6bZnJ0wPP7evTx8PKFfJENfsnoQDZLtMhTP0=
-
 #from xmlrpc.client import boolean
+
 from flask import Blueprint, render_template
+
 #from flask_login import login_required, current_user
 #from . import db
 
