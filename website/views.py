@@ -50,3 +50,7 @@ def parent_dashboard():
 @views.route('/teacher_dashboard')
 def teacher_dashboard():
     return render_template("teacher_dashboard.html")
+
+@views.route('/sign_up')
+def sign_up():
+    return render_template("sign_up.html")
