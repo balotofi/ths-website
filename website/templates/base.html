@@ -15,13 +15,11 @@
           href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           crossorigin="anonymous"
         />
-
         <title>{% block title %}Home{% endblock %}</title>
     </head>
+
     <body>
-
     <div class="b-example-divider"></div>
-
     <header class="py-3 mb-4">
       <div class="container d-flex flex-wrap justify-content-left">
         <a class="navbar-brand" href="/">
@@ -38,22 +36,20 @@
         <div class="navbar-nav">
           <div class="container d-flex flex-wrap">
             <ul class="nav me-auto">
-              <li class="nav-item"><a href="/" class="nav-link link-dark px-4 active" aria-current="page">Home</a></li>
-              <li class="nav-item"><a href="/about" class="nav-link link-dark px-4">About Us</a></li>
-              <li class="nav-item"><a href="/parents" class="nav-link link-dark px-4">Parents</a></li>
-              <li class="nav-item"><a href="/news" class="nav-link link-dark px-4">News & Events</a></li>
-              <li class="nav-item"><a href="/gallery" class="nav-link link-dark px-4">Gallery</a></li>
-              <li class="nav-item"><a href="/results" class="nav-link link-dark px-4">Pupil's Results</a></li>
-              <li class="nav-item"><a href="/vacancies" class="nav-link link-dark px-4">We're Hiring</a></li>
-              <li class="nav-item"><a href="/contact" class="nav-link link-dark px-4">Contact Us</a></li>
+              <li class="nav-item"><a id="home" href="/" class="nav-link link-dark px-4 active" aria-current="page">Home</a></li>
+              <li class="nav-item"><a id="about" href="/about" class="nav-link link-dark px-4">About Us</a></li>
+              <li class="nav-item"><a id="parents" href="/parents" class="nav-link link-dark px-4">Parents</a></li>
+              <li class="nav-item"><a id="news" href="/news" class="nav-link link-dark px-4">News & Events</a></li>
+              <li class="nav-item"><a id="gallery" href="/gallery" class="nav-link link-dark px-4">Gallery</a></li>
+              <li class="nav-item"><a id="results" href="/results" class="nav-link link-dark px-4">Pupil's Results</a></li>
+              <li class="nav-item"><a id="vacancies" href="/vacancies" class="nav-link link-dark px-4">We're Hiring</a></li>
+              <li class="nav-item"><a id="contact" href="/contact" class="nav-link link-dark px-4">Contact Us</a></li>
             </ul>
           </div>
         </div>
       </div>>
     </nav>
-
     <div class="container-fluid">{% block content %} Home {% endblock %}</div>
-    
       <script
         src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
