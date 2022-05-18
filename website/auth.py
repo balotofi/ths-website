@@ -38,6 +38,7 @@ def logout():
 @auth.route('/sign_up', methods=['GET', 'POST'])
 def sign_up():
     if request.method == 'POST':
+        accessType = request.form.get('accessType')
         email = request.form.get('email')
         familyName = request.form.get('familyName')
         userName = request.form.get('userName')
@@ -47,7 +48,9 @@ def sign_up():
 #         user = User.query.filter_by(email=email).first()
 #         if user:
 #             flash('Email already exists.', category='error')
-        if len(email) < 4:
+        if accessType != "parent" and accessType != "teacher":
+                flash('You can only register as a parent or teacher.', category='error')
+        elif len(email) < 4:
             flash('Email must be greater than three characters.', category='error')
         elif len(familyName) < 2:
             flash('Family name must be greater than one character.', category='error')
