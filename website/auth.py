@@ -9,22 +9,29 @@ auth = Blueprint('auth', __name__)
 
 @auth.route('/results', methods=['GET', 'POST'])
 def login():
-#     if request.method == 'POST':
-#         email = request.form.get('email')
-#         password = request.form.get('password')
+    if request.method == 'POST':
+        userName = request.form.get('userName')
+        password = request.form.get('password')
+        # accessType = request.form.get('accessType')
 
-#         user = User.query.filter_by(email=email).first()
-#         if user:
-#             if check_password_hash(user.password, password):
-#                 flash('Logged in successfully!', category='success')
+        user_check = User.query.filter_by(userName=userName).first()
+        # access_check = User.query.filter_by(accessType=accessType).first()
+        if user_check:
+            if check_password_hash(user_check.password, password):
+                flash('Logged in successfully!', category='success')
 #                 login_user(user, remember=True)
-#                 return redirect(url_for('views.results'))
-#             else:
-#                 flash('Incorrect password, try again.', category='error')
-#         else:
-#             flash('Email does not exist.', category='error')
+                # return redirect(url_for('views.results'))
+                # if access_check.accessType == "teacher":
+                #     return redirect(url_for('views.teacher_dashboard'))
+                # elif access_check.accessType == "parent":
+                #     return redirect(url_for('views.parent_dashboard'))
+            else:
+                flash('Incorrect password, try again.', category='error')
+        else:
+            flash('Username does not exist.', category='error')
     
     return render_template("results.html", boolean=True) #user=current_user)
+
 
 @auth.route('/logout')
 # # @login_required
@@ -43,11 +50,15 @@ def sign_up():
         password1 = request.form.get('password1')
         password2 = request.form.get('password2')
 
-#         user = User.query.filter_by(email=email).first()
-#         if user:
-#             flash('Email already exists.', category='error')
-        if accessType != "parent" and accessType != "teacher":
-                flash('You can only register as a parent or teacher.', category='error')
+        user_check = User.query.filter_by(userName=userName).first()
+        email_check = User.query.filter_by(email=email).first()
+
+        if user_check:
+            flash('Username already exists.', category='error')
+        elif email_check:
+            flash('This email is being used by another account.', category='error')
+        elif accessType != "parent" and accessType != "teacher":
+            flash('You can only register as a parent or teacher.', category='error')
         elif len(email) < 4:
             flash('Email must be greater than three characters.', category='error')
         elif len(familyName) < 2:
@@ -59,17 +70,12 @@ def sign_up():
         elif len(password1) < 7:
             flash('Password must be at least seven characters.', category='error')
         else:
-#             #add user to database
+            #add user to database
             new_user = User(accessType=accessType, email=email, userName=userName, familyName=familyName, password=generate_password_hash(password1, method='sha256'))
             db.session.add(new_user)
             db.session.commit()
 #             login_user(user, remember=True)
             flash('Account created!', category='success')
-            return redirect(url_for('views.sign_up'))
-            # if accessType == "teacher":
-            #     return redirect(url_for('views.teacher_dashboard'))
-            # elif accessType == "parent":
-            #     return redirect(url_for('views.parent_dashboard'))
-            
+            return redirect(url_for('views.sign_up'))   
 
-    return render_template("sign_up.html") #, user=current_user)
+    # return render_template("sign_up.html") #, user=current_user)
