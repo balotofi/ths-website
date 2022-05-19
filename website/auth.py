@@ -1,7 +1,7 @@
-from flask import Blueprint, render_template, request, flash #redirect, url_for 
-# from .models import User
-# from werkzeug.security import generate_password_hash, check_password_hash
-# from . import db
+from flask import Blueprint, render_template, request, flash, redirect, url_for 
+from .models import User
+from werkzeug.security import generate_password_hash, check_password_hash
+from . import db
 # from flask_login import login_user, login_required, logout_user, current_user
 
 
@@ -9,8 +9,6 @@ auth = Blueprint('auth', __name__)
 
 @auth.route('/results', methods=['GET', 'POST'])
 def login():
-    data = request.form
-    print(data) 
 #     if request.method == 'POST':
 #         email = request.form.get('email')
 #         password = request.form.get('password')
@@ -62,11 +60,16 @@ def sign_up():
             flash('Password must be at least seven characters.', category='error')
         else:
 #             #add user to database
-#             new_user = User(email=email, first_name=first_name, password=generate_password_hash(password1, method='sha256'))
-#             db.session.add(new_user)
-#             db.session.commit()
+            new_user = User(accessType=accessType, email=email, userName=userName, familyName=familyName, password=generate_password_hash(password1, method='sha256'))
+            db.session.add(new_user)
+            db.session.commit()
 #             login_user(user, remember=True)
             flash('Account created!', category='success')
-#             return redirect(url_for('views.home'))
+            return redirect(url_for('views.sign_up'))
+            # if accessType == "teacher":
+            #     return redirect(url_for('views.teacher_dashboard'))
+            # elif accessType == "parent":
+            #     return redirect(url_for('views.parent_dashboard'))
+            
 
     return render_template("sign_up.html") #, user=current_user)
